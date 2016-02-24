@@ -1,0 +1,74 @@
+div.chat {
+	width: 100%;
+	min-width: 300px;
+    border: 1px solid rgb(195, 201, 207);
+    border-radius: 3px;
+    padding: 3px;
+    background: rgb(250, 250, 250) none repeat scroll 0% 0%;
+}
+
+input {
+	color: #222;
+	display: block;
+	width: 100%;
+	padding: 9px;
+	border: 1px solid #EAEAEA;
+}
+
+div.chat-messages {
+    height: 300px;
+    background: #FFF;
+    margin: 4px 0;
+    border: 1px solid #EEE;
+    overflow-y: scroll;
+    padding: 15px;
+}
+div.chat-messages ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+div.chat-messages ul li {
+	font-family: helvetica;
+	line-height: 30px;
+	margin: 5px 0px;
+}
+div.chat-messages ul li span.text {
+	color: #FFFFFF;
+	font-family: Courier new;
+	background: rgb(148, 213, 255) none repeat scroll 0% 0%;
+	padding: 7px 15px;
+	line-height: 30px;
+	border-radius: 15px;
+}
+div.chat-messages ul li span.user {
+	font-family: helvetica;
+	font-weight: 600;
+	font-size: 11px;
+	color: #3B3B3B;
+}
+input.message {
+	color: #222;
+	width: 100%;
+	padding: 9px;
+	border: 1px solid #EAEAEA;
+}
+div.chat-status {
+	color: #333;
+	padding: 4px;
+}
+div.chat-status span {
+	color: #079;
+	font-weight: 600;
+}
+ul.colors {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.colors li {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	border-radius: 2px;
+}

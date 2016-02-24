@@ -1,0 +1,42 @@
+
+<html>
+	<head>
+		<title>SMS</title>
+		<link rel="stylesheet" href="./css/main.css">
+		<script src="./js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="chat" ng-app="msg" ng-controller="msgCtrl">
+			<input type="text" class="chat-name" placeholder="Username" ng-model="message.user">
+			<div class="chat-messages">
+				<ul>
+					<li ng-repeat="message in messages">
+						<span class="text" ng-style="{background: message.color};">{{message.message}}</span>
+						<span class="user">{{message.user}}</span>	
+					</li>
+				</ul>
+			</div>
+			<form ng-submit="send()">
+				<input placeholder="Your msg" id="message" ng-model="message.message" />
+			</form>
+			<div class="chat-status">
+				I'am : <span  ng-style="{color: message.color};">{{message.user}}</span>
+				<br /><br /> 
+				<ul class="colors">
+					<li style="background:#36B0FF" ng-click="setColor('#36B0FF')"></li>
+					<li style="background:#F44336" ng-click="setColor('#F44336')"></li>
+					<li style="background:#9C27B0" ng-click="setColor('#9C27B0')"></li>
+					<li style="background:#3F51B5" ng-click="setColor('#3F51B5')"></li>
+					<li style="background:#4CAF50" ng-click="setColor('#4CAF50')"></li>
+					<li style="background:#263238" ng-click="setColor('#263238')"></li>
+				</ul>
+			</div>
+		</div>
+
+		<script src="./js/angular.min.js"></script>
+		<script src="./js/controllers/msg.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="./general.js"></script>
+
+	</body>
+</html>
